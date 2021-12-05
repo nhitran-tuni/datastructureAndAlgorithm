@@ -1,0 +1,95 @@
+> read "perftest-compulsory.txt"
+** Commands from 'perftest-compulsory.txt'
+> # Test the performance of compulsory operations
+> perftest way_coords 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+way_coords 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   7.1421e-05 ,    0.0162075 ,    0.0162789
+     30 ,    0.0007337 ,   0.00906049 ,   0.00979419
+    100 ,  0.000938353 ,   0.00535852 ,   0.00629688
+    300 ,   0.00221465 ,   0.00892946 ,    0.0111441
+   1000 ,    0.0086638 ,   0.00448372 ,    0.0131475
+   3000 ,    0.0183106 ,   0.00370277 ,    0.0220133
+  10000 ,    0.0601193 ,   0.00373866 ,     0.063858
+  30000 ,      0.18997 ,   0.00423594 ,     0.194206
+ 100000 ,     0.721398 ,   0.00486545 ,     0.726264
+ 300000 ,      2.58661 ,   0.00516425 ,      2.59178
+1000000 ,      11.9309 ,   0.00551035 ,      11.9364
+> perftest ways_from 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+ways_from 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   0.00703567 ,   0.00250409 ,   0.00953976
+     30 ,   0.00034515 ,   0.00322831 ,   0.00357347
+    100 ,   0.00096352 ,   0.00327797 ,   0.00424149
+    300 ,   0.00358594 ,   0.00326199 ,   0.00684793
+   1000 ,   0.00857277 ,    0.0057275 ,    0.0143003
+   3000 ,    0.0297583 ,   0.00406326 ,    0.0338215
+  10000 ,    0.0943946 ,    0.0102944 ,     0.104689
+  30000 ,     0.253403 ,   0.00513385 ,     0.258536
+ 100000 ,     0.780299 ,   0.00566594 ,     0.785965
+ 300000 ,      2.76886 ,   0.00818364 ,      2.77704
+1000000 ,      8.98372 ,    0.0139441 ,      8.99766
+> perftest route_any 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+route_any 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   0.00622612 ,   0.00710078 ,    0.0133269
+     30 ,  0.000270894 ,   0.00475233 ,   0.00502322
+    100 ,  0.000717648 ,    0.0188664 ,    0.0195841
+    300 ,   0.00201652 ,   0.00892099 ,    0.0109375
+   1000 ,   0.00644477 ,     0.010091 ,    0.0165358
+   3000 ,    0.0198638 ,    0.0132971 ,    0.0331609
+  10000 ,    0.0670532 ,    0.0334785 ,     0.100532
+  30000 ,     0.223928 ,    0.0734054 ,     0.297334
+ 100000 ,      0.85182 ,     0.440019 ,      1.29184
+ 300000 ,      2.51054 ,      4.24311 ,      6.75365
+1000000 ,      11.2914 , Timeout!
+> 
+** End of commands from 'perftest-compulsory.txt'
+> read "perftest-route_least_crossroads.txt"
+** Commands from 'perftest-route_least_crossroads.txt'
+> # Test the performance of routing
+> perftest route_least_crossroads 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+route_least_crossroads 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,  0.000515942 ,   0.00895834 ,   0.00947429
+     30 ,  0.000230101 ,    0.0238737 ,    0.0241038
+    100 ,  0.000653698 ,   0.00480937 ,   0.00546307
+    300 ,   0.00214058 ,   0.00625323 ,   0.00839381
+   1000 ,   0.00743183 ,     0.012337 ,    0.0197688
+   3000 ,    0.0225092 ,    0.0248788 ,     0.047388
+  10000 ,    0.0736307 ,    0.0655327 ,     0.139163
+  30000 ,     0.236276 ,     0.312365 ,     0.548641
+ 100000 ,     0.892286 ,     0.539236 ,      1.43152
+ 300000 ,      2.64459 ,      3.51729 ,      6.16188
+1000000 ,       9.9306 , Timeout!
+> 
+** End of commands from 'perftest-route_least_crossroads.txt'
+> read "perftest-route_shortest_distance.txt"
+** Commands from 'perftest-route_shortest_distance.txt'
+> # Test the performance of routing
+> perftest route_shortest_distance 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+route_shortest_distance 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,  0.000102089 ,    0.0107785 ,    0.0108806
+     30 ,  0.000227291 ,    0.0444954 ,    0.0447227
+    100 ,  0.000763942 ,     0.181828 ,     0.182592
+    300 ,   0.00203297 ,     0.670359 ,     0.672392
+   1000 ,   0.00698277 ,      3.72534 ,      3.73233
+   3000 ,    0.0218222 , Timeout!
+> 
+** End of commands from 'perftest-route_shortest_distance.txt'

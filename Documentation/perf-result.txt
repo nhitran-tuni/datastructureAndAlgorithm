@@ -1,0 +1,219 @@
+> read "perftest-all.txt"
+** Commands from 'perftest-all.txt'
+> # Read performance tests of all operations
+> read "perftest-compulsory.txt"
+** Commands from 'perftest-compulsory.txt'
+> # Read performance tests of compulsory operations
+> read "perftest-access.txt"
+** Commands from 'perftest-access.txt'
+> # Test the performance of stop_name/stop_coord/region_name
+> perftest place_name_type;place_coord;area_name 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+place_name_type place_coord area_name 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,  0.000120685 ,   0.00477963 ,   0.00490032
+     30 ,   6.2298e-05 ,   0.00271792 ,   0.00278022
+    100 ,  0.000131022 ,   0.00238017 ,   0.00251119
+    300 ,  0.000458156 ,   0.00287298 ,   0.00333114
+   1000 ,   0.00158399 ,    0.0031395 ,   0.00472349
+   3000 ,   0.00458072 ,    0.0030878 ,   0.00766852
+  10000 ,    0.0141475 ,   0.00252936 ,    0.0166769
+  30000 ,    0.0416461 ,   0.00219831 ,    0.0438444
+ 100000 ,     0.158191 ,   0.00262406 ,     0.160815
+ 300000 ,     0.498518 ,   0.00297131 ,      0.50149
+1000000 ,      2.12059 ,   0.00314033 ,      2.12373
+> 
+** End of commands from 'perftest-access.txt'
+> read "perftest-sorting.txt"
+** Commands from 'perftest-sorting.txt'
+> # Test the performance of sorting, adding stops in between
+> perftest places_alphabetically;places_coord_order;random_add 20 500 10;30;100;300;1000;3000;10000;30000;100000;300000
+Timeout for each N is 20 sec. 
+For each N perform 500 random command(s) from:
+places_alphabetically places_coord_order random_add 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   3.1568e-05 ,    0.0105798 ,    0.0106113
+     30 ,    5.671e-05 ,    0.0143151 ,    0.0143718
+    100 ,  0.000646167 ,    0.0437162 ,    0.0443623
+    300 ,    0.0003425 ,    0.0554388 ,    0.0557813
+   1000 ,   0.00117053 ,     0.168892 ,     0.170063
+   3000 ,   0.00738581 ,     0.525977 ,     0.533363
+  10000 ,    0.0173728 ,       2.2196 ,      2.23697
+  30000 ,    0.0715058 ,      6.59541 ,      6.66691
+ 100000 ,     0.234927 , Timeout!
+> 
+** End of commands from 'perftest-sorting.txt'
+> read "perftest-change.txt"
+** Commands from 'perftest-change.txt'
+> # Test the performance of changing name/coord
+> perftest change_place_name;change_place_coord 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+change_place_name change_place_coord 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   3.4082e-05 ,   0.00383231 ,   0.00386639
+     30 ,    5.699e-05 ,   0.00432343 ,   0.00438042
+    100 ,  0.000156444 ,   0.00493691 ,   0.00509336
+    300 ,   0.00102247 ,   0.00978246 ,    0.0108049
+   1000 ,   0.00151303 ,    0.0055543 ,   0.00706733
+   3000 ,   0.00873765 ,    0.0137556 ,    0.0224932
+  10000 ,    0.0159698 ,   0.00658209 ,    0.0225519
+  30000 ,    0.0423635 ,   0.00677232 ,    0.0491358
+ 100000 ,     0.170496 ,    0.0082334 ,     0.178729
+ 300000 ,     0.512013 ,   0.00950869 ,     0.521522
+1000000 ,      1.79125 ,    0.0108862 ,      1.80214
+> 
+** End of commands from 'perftest-change.txt'
+> read "perftest-find_places.txt"
+** Commands from 'perftest-find_places.txt'
+> # Test the performance of finding places
+> perftest find_places_name 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+find_places_name 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   6.2298e-05 ,   0.00338949 ,   0.00345179
+     30 ,  0.000118729 ,   0.00703354 ,   0.00715227
+    100 ,  0.000183263 ,    0.0068673 ,   0.00705057
+    300 ,  0.000923017 ,   0.00727631 ,   0.00819932
+   1000 ,   0.00238939 ,     0.008332 ,    0.0107214
+   3000 ,   0.00467179 ,   0.00487545 ,   0.00954725
+  10000 ,    0.0139067 ,   0.00536405 ,    0.0192708
+  30000 ,    0.0418539 ,   0.00589679 ,    0.0477507
+ 100000 ,     0.156056 ,   0.00691954 ,     0.162975
+ 300000 ,     0.516399 ,   0.00829375 ,     0.524693
+1000000 ,      1.83699 ,   0.00932907 ,      1.84632
+> perftest find_places_type 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+find_places_type 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   3.2406e-05 ,   0.00405831 ,   0.00409072
+     30 ,  0.000155326 ,   0.00856529 ,   0.00872062
+    100 ,  0.000154488 ,    0.0153005 ,    0.0154549
+    300 ,  0.000687793 ,    0.0415061 ,    0.0421939
+   1000 ,   0.00135966 ,       0.1244 ,      0.12576
+   3000 ,   0.00962546 ,     0.340249 ,     0.349874
+  10000 ,    0.0137556 ,      1.17619 ,      1.18995
+  30000 ,    0.0581919 ,      3.80601 ,       3.8642
+ 100000 ,     0.166966 ,      13.8499 ,      14.0169
+ 300000 ,     0.510227 , Timeout!
+> 
+** End of commands from 'perftest-find_places.txt'
+> read "perftest-subareas.txt"
+** Commands from 'perftest-subareas.txt'
+> # Test the performance of subarea chain
+> perftest subarea_in_areas 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+subarea_in_areas 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   6.3695e-05 ,   0.00461536 ,   0.00467906
+     30 ,   8.8558e-05 ,   0.00344091 ,   0.00352946
+    100 ,  0.000332442 ,   0.00974335 ,    0.0100758
+    300 ,  0.000882788 ,   0.00778055 ,   0.00866334
+   1000 ,   0.00157393 ,   0.00792582 ,   0.00949975
+   3000 ,   0.00684217 ,   0.00976292 ,    0.0166051
+  10000 ,     0.019506 ,    0.0141947 ,    0.0337007
+  30000 ,    0.0458748 ,    0.0110963 ,    0.0569711
+ 100000 ,     0.150118 ,    0.0123638 ,     0.162482
+ 300000 ,     0.490429 ,     0.016031 ,      0.50646
+1000000 ,      1.67638 ,    0.0173063 ,      1.69369
+> 
+** End of commands from 'perftest-subareas.txt'
+> 
+** End of commands from 'perftest-compulsory.txt'
+> read "perftest-all_subareas.txt"
+** Commands from 'perftest-all_subareas.txt'
+> # Test the performance of subarea containment
+> perftest all_subareas_in_area 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+all_subareas_in_area 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   3.9669e-05 ,   0.00218155 ,   0.00222122
+     30 ,   6.9562e-05 ,   0.00422648 ,   0.00429604
+    100 ,  0.000157561 ,     0.013189 ,    0.0133466
+    300 ,  0.000413458 ,    0.0484377 ,    0.0488512
+   1000 ,   0.00120406 ,      0.21834 ,     0.219544
+   3000 ,   0.00384376 ,     0.843199 ,     0.847042
+  10000 ,    0.0147526 ,      3.37195 ,       3.3867
+  30000 ,    0.0420327 ,      12.5433 ,      12.5854
+ 100000 ,     0.154262 , Timeout!
+> 
+** End of commands from 'perftest-all_subareas.txt'
+> read "perftest-places_closest_to.txt"
+** Commands from 'perftest-places_closest_to.txt'
+> # Test the performance of places_closest_to
+> perftest places_closest_to 20 500 10;30;100;300;1000;3000;10000;30000;100000;300000
+Timeout for each N is 20 sec. 
+For each N perform 500 random command(s) from:
+places_closest_to 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   4.0228e-05 ,  0.000609572 ,    0.0006498
+     30 ,   5.7828e-05 ,   0.00182676 ,   0.00188459
+    100 ,  0.000333839 ,   0.00480477 ,   0.00513861
+    300 ,  0.000657062 ,    0.0153681 ,    0.0160251
+   1000 ,    0.0013971 ,    0.0556101 ,    0.0570072
+   3000 ,   0.00361692 ,     0.180842 ,     0.184459
+  10000 ,    0.0144314 ,     0.719534 ,     0.733965
+  30000 ,     0.043757 ,      2.54811 ,      2.59187
+ 100000 ,     0.167821 ,      9.25405 ,      9.42187
+ 300000 ,     0.466912 , Timeout!
+> 
+** End of commands from 'perftest-places_closest_to.txt'
+> read "perftest-remove.txt"
+** Commands from 'perftest-remove.txt'
+> # Test the performance of removal
+> perftest remove_place 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+remove_place 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   4.0507e-05 ,   0.00150158 ,   0.00154208
+     30 ,   8.6044e-05 ,   0.00143704 ,   0.00152308
+    100 ,  0.000145269 ,   0.00149878 ,   0.00164405
+    300 ,   0.00040368 ,   0.00171418 ,   0.00211786
+   1000 ,   0.00136106 ,   0.00261876 ,   0.00397982
+   3000 ,   0.00582221 ,     0.004103 ,   0.00992521
+  10000 ,    0.0148853 ,   0.00591663 ,    0.0208019
+  30000 ,    0.0447507 ,   0.00733916 ,    0.0520898
+ 100000 ,     0.155819 ,      0.01355 ,     0.169369
+ 300000 ,      0.48511 ,   0.00982744 ,     0.494938
+1000000 ,       1.7276 ,    0.0176952 ,      1.74529
+> 
+** End of commands from 'perftest-remove.txt'
+> read "perftest-common_area.txt"
+** Commands from 'perftest-common_area.txt'
+> # Test the performance of common area search
+> perftest common_area_of_subareas 20 5000 10;30;100;300;1000;3000;10000;30000;100000;300000;1000000
+Timeout for each N is 20 sec. 
+For each N perform 5000 random command(s) from:
+common_area_of_subareas 
+
+      N ,    add (sec) ,   cmds (sec) ,  total (sec)
+     10 ,   4.1625e-05 ,   0.00485645 ,   0.00489808
+     30 ,   6.9003e-05 ,   0.00733746 ,   0.00740647
+    100 ,  0.000422118 ,    0.0115209 ,    0.0119431
+    300 ,  0.000386639 ,     0.014021 ,    0.0144076
+   1000 ,   0.00171445 ,    0.0175275 ,     0.019242
+   3000 ,   0.00725535 ,    0.0246351 ,    0.0318904
+  10000 ,     0.015574 ,    0.0237501 ,     0.039324
+  30000 ,    0.0432013 ,    0.0263029 ,    0.0695042
+ 100000 ,     0.150127 ,    0.0343961 ,     0.184523
+ 300000 ,     0.474854 ,    0.0349654 ,     0.509819
+1000000 ,       1.7125 ,    0.0415257 ,      1.75403
+> 
+** End of commands from 'perftest-common_area.txt'
+> 
+** End of commands from 'perftest-all.txt'
